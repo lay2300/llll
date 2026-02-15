@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine Ultra Premium</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Itim&family=Mali:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      .dot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Audio Elements -->
+    <audio id="bgMusic" loop>
+      <source
+        src="Download-_1_.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="sfxClick">
+      <source
+        src="https://www.soundjay.com/button/sounds/button-3.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="sfxSuccess">
+      <source
+        src="https://www.soundjay.com/misc/sounds/magic-chime-02.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="sfxError">
+      <source
+        src="https://www.soundjay.com/button/sounds/button-10.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="sfxPop">
+      <source
+        src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="sfxShutter">
+      <source
+        src="https://www.soundjay.com/mechanical/sounds/camera-shutter-click-01.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="sfxTick">
+      <source
+        src="https://www.soundjay.com/clock/sounds/clock-ticking-2.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    <div class="app">
+      <!-- LOCK SCREEN -->
+      <div class="screen active" id="lock">
+        <div class="lock-container">
+          <img
+            src="2.jpg"
+            class="lock-photo"
+            alt="Background"
+          />
+          <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+            <div class="time" id="time"></div>
+            <div class="date">Happy Valentine's Day ❤️</div>
+            <div class="greeting">สวัสดีครับคนสวย 🐰💖</div>
+            <div class="dots">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="keypad">
+              <div class="key" onclick="press(1)">1</div>
+              <div class="key" onclick="press(2)">2</div>
+              <div class="key" onclick="press(3)">3</div>
+              <div class="key" onclick="press(4)">4</div>
+              <div class="key" onclick="press(5)">5</div>
+              <div class="key" onclick="press(6)">6</div>
+              <div class="key" onclick="press(7)">7</div>
+              <div class="key" onclick="press(8)">8</div>
+              <div class="key" onclick="press(9)">9</div>
+              <div></div>
+              <div class="key" onclick="press(0)">0</div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COUNTDOWN SCREEN -->
+      <div class="screen" id="countdown">
+        <div class="count" id="count">3</div>
+      </div>
+
+      <!-- MEMORY SCREEN -->
+      <div class="screen memory" id="memory">
+        <div class="polaroid" id="polaroid">
+          <div class="tape"></div>
+          <img id="memoryImg" src="" alt="Memory" />
+          <div class="caption" id="memoryCaption"></div>
+        </div>
+      </div>
+
+      <!-- SURPRISE SCREEN -->
+      <div class="screen surprise" id="surprise">
+        <div class="surprise-box">
+          <div class="sticker">🥺👉👈</div>
+          <h2>รักเค้ามั้ย? 💕</h2>
+          <div class="buttons">
+            <button class="btn yes" onclick="goFinal()">รักที่สุด 💖</button>
+            <button class="btn no" id="noBtn">ไม่รัก 😝</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FINAL SCREEN -->
+      <div class="screen" id="final">
+        <div class="card" id="card">
+          <img
+            src="14065e87-ef1a-4823-9d53-1732a559c448.jpg"
+            alt="Valentine Card"
+          />
+          <h1>Happy Valentine's Day</h1>
+          <p>
+            สุขสันต์วันวาเลนไทน์นะอ้วน<br />
+            ถึงเค้าจะไม่ค่อยได้ซื้ออะไรให้ เค้าอยากให้เว็ปไซร์นี้เป็นของขวัญที่พิเศษที่สุด<br />
+            เค้ารักเธอมากกว่าเมื่อวาน และจะรักมากขึ้นทุกวัน อยู่กับเค้านานๆนะค้าบบ ❤️
+          </p>
+        </div>
+        <button
+          class="btn yes"
+          onclick="goReplay()"
+          style="margin-top: 30px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)"
+        >
+          เล่นอีกครั้ง 🔄
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
