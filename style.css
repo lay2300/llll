@@ -12,7 +12,7 @@ c/* ========================================
 body {
   height: 100vh;
   overflow: hidden;
-  background: #ff8fa3 url("/1.jpg") center / cover;
+  background: #ff8fa3 url("1.jpg") center / cover;
   display: flex;
   justify-content: center;
   align-items: center;
